@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_ad_mob/banner_ad_screen.dart';
 
+import 'interstitial_ad_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -29,18 +31,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   fixedSize: Size(150, 50)
                 ),
                 child: Text("Banner",style: TextStyle(color: Colors.white),)),
+             ElevatedButton(onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context) => InterstitialAdScreen(),));
+             },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  fixedSize: Size(150, 50)
+                ),
+                child: Text("Interstitial",style: TextStyle(color: Colors.white),)),
              ElevatedButton(onPressed: (){},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   fixedSize: Size(150, 50)
                 ),
-                child: Text("data",style: TextStyle(color: Colors.white),)),
-             ElevatedButton(onPressed: (){},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  fixedSize: Size(150, 50)
-                ),
-                child: Text("data",style: TextStyle(color: Colors.white),)),
+                child: Text("Rewarded",style: TextStyle(color: Colors.white),)),
 
           ],
         ),
