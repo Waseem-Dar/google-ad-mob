@@ -40,17 +40,7 @@ class _InterstitialAdScreenState extends State<InterstitialAdScreen> {
       appBar: AppBar(
         title: Text("Interstitial Ad"),
       ),
-      body: Stack(
-        children: [
-          // if(_interstitialAd != null)
-          // Align(
-          //   alignment: Alignment.center,
-          //   child:Container(
-          //     child:  _interstitialAd.show(),
-          //   ),
-          // )
-        ],
-      ),
+      body: Center()
     );
   }
 }

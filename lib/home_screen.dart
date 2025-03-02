@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_ad_mob/banner_ad_screen.dart';
+import 'package:google_ad_mob/rewarded_ad_screen.dart';
 
 import 'interstitial_ad_screen.dart';
 
@@ -39,7 +40,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   fixedSize: Size(150, 50)
                 ),
                 child: Text("Interstitial",style: TextStyle(color: Colors.white),)),
-             ElevatedButton(onPressed: (){},
+             ElevatedButton(onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context) => RewardedAdScreen(),));
+             },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   fixedSize: Size(150, 50)
